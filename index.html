@@ -1,0 +1,101 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <title>EXPE</title>
+</head>
+
+<body>
+  <header>
+    <section class="Container">
+      <div class="Who">
+        <div class="Who__Item">
+          <a href="index.html">Hector.Travaillé</a>
+        </div>
+        <div class="Who__What">
+          <p>Interactive + UX / UI Designer</p>
+        </div>
+      </div>
+    </section>
+  </header>
+  <section class="Category  tabs">
+    <div class="Category__Item">
+      <a href="#page1" class="is-activee">PROJETS</a>
+      <a href="#page2">CONTACT</a>
+      <a href="#page3">A PROPOS</a>
+    </div>
+    <div class="tabs-contents">
+
+      <article id="#page1" class="tabs-content is-active">
+        <div class="Category__Title">
+          <h1>Portfolio</h1>
+        </div>
+      </article>
+      <article id="#page2" class="tabs-content">
+        <div>Bonjour à toi, Bienvenue sur mon site ! Je suis Hector Travaillé ( 20 ans ) un jeune UX / UI Designer. J'ai toujours voulu travaillé dans le monde du World Wide Web. <br /> Je suis dans une formation de 3 ans avec 2 ans d'alternance et notemment
+          un stage pour valider ma première année.</div>
+      </article>
+      <article id="#page3" class="tabs-content">
+        <div>
+          <div class="Category__Img">
+            <img src="img/fashion.jpg" alt="fashion">
+          </div>
+
+          <div class="Category__Img">
+            <img src="img/home.png" alt="home">
+          </div>
+        </div>
+      </article>
+      <article id="#page4" class="tabs-content">4. Ex qui laudantium atque deleniti dicta ea hic placeat, vero in culpa, nemo voluptatem iusto suscipit. Ut veritatis ipsam adipisci architecto animi aut ipsum est, praesentium eius placeat, voluptate libero?</article>
+    </div>
+  </section>
+
+  <script src="three.js"></script>
+  <script src="background.js"></script>
+  <script>
+    var tab = document.querySelectorAll('.Category__Item a');
+    var content = document.querySelectorAll('.tabs-content');
+    var three = document.querySelector('.oula');
+
+    for (var i = 0; i < tab.length; i++) {
+
+      tab[i].addEventListener('click', function() {
+        var href = this.getAttribute('href');
+
+        for (var a = 0; a < tab.length; a++) {
+          tab[a].classList.remove('is-activee');
+          three.style.display = "block";
+          three.style.transform = "scale(1)";
+          three.style.transition = "all 1s cubic-bezier(.17,.67,.45,1.38)";
+          if (href === '#page3') {
+            three.style.transform = "scale(.1)";
+            three.style.transition = "all .3s ease-out";
+          }
+          if (href === '#page2') {
+            three.style.transform = "scale(.8)";
+            three.style.transition = "all 1s cubic-bezier(.17,.67,.45,1.38)";
+          }
+        }
+
+        this.classList.add('is-activee');
+
+
+        for (var a = 0; a < content.length; a++) {
+          if (href === content[a].getAttribute('id')) {
+            content[a].classList.add('is-active');
+          } else {
+            content[a].classList.remove('is-active');
+          }
+        }
+
+      });
+
+    }
+  </script>
+</body>
+
+</html>
