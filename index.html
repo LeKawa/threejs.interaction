@@ -70,12 +70,14 @@
           tab[a].classList.remove('is-activee');
           three.style.display = "block";
           three.style.transform = "scale(1)";
+          three.style.opacity = "1";
           three.style.transition = "all 1s cubic-bezier(.17,.67,.45,1.38)";
           if (href === '#page3') {
-            three.style.transform = "scale(.1)";
-            three.style.transition = "all .3s ease-out";
+            three.style.opacity = "0";
+            three.style.transition = "all 1s cubic-bezier(.17,.67,.45,1.38)";
           }
           if (href === '#page2') {
+            three.style.opacity = "1";
             three.style.transform = "scale(.8)";
             three.style.transition = "all 1s cubic-bezier(.17,.67,.45,1.38)";
           }
