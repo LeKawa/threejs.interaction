@@ -244,4 +244,56 @@ body {
   -webkit-text-stroke: 1.2px #9E1707;
   color: #FAFAFA; }
 
+.Carroussel {
+  width: 50vw;
+  height: 60vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: red;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("https://i.imgur.com/OWxpJR2.jpg"); }
+  .Carroussel__Command {
+    width: 62.5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    .Carroussel__Command > a > svg {
+      width: 20Px;
+      height: auto; }
+  .Carroussel__Img {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end; }
+  .Carroussel__Next {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa; }
+  .Carroussel__Name {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 60%;
+    font-size: 58px;
+    width: 50%;
+    background-color: #fafafa; }
+    .Carroussel__Name > p {
+      padding-bottom: 10px; }
+  .Carroussel__Link {
+    width: 37.5%;
+    display: flex;
+    justify-content: center; }
+    .Carroussel__Link > a {
+      transition: all .3s ease-out; }
+      .Carroussel__Link > a:hover {
+        opacity: .7; }
+
 /*# sourceMappingURL=style.css.map */

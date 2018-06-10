@@ -179,6 +179,7 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -282,4 +283,74 @@ body {
 .is-activee {
   -webkit-text-stroke: 1.2px #9E1707;
   color: #FAFAFA;
+}
+
+.Carroussel {
+  width: 50vw;
+  height: 60vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: red;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("https://i.imgur.com/OWxpJR2.jpg");
+  &__Command {
+    width: 62.5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    & > a {
+      & > svg {
+        width: 20Px;
+        height: auto;
+      }
+    }
+  }
+
+  &__Img {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &__Next {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+  }
+
+  &__Name {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 60%;
+    font-size: 58px;
+    width: 50%;
+    background-color: #fafafa;
+    & > p {
+      padding-bottom: 10px;
+
+    }
+  }
+
+  &__Link {
+    width: 37.5%;
+    display: flex;
+    justify-content: center;
+
+    & > a {
+      transition: all .3s ease-out;
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
 }
